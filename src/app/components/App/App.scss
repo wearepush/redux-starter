@@ -9,4 +9,46 @@
   &__container {
     flex: 1 0 auto;
   }
+
+  &__wrapper {
+    position: relative;
+
+    & > div {
+      -webkit-box-direction: normal;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      left: 0;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      -webkit-box-flex: 1;
+      -webkit-box-orient: vertical;
+      flex: 1 1 0%;
+      flex-flow: column;
+      height: 100%;
+    }
+  }
 }
+
+:global {
+  .route-enter {
+    opacity: 0;
+    transform: translate3d(0, 10px, 0);
+  }
+  .route-enter.route-enter-active {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    transition: transform 500ms cubic-bezier(.77,0,.28,1), opacity 500ms cubic-bezier(.77,0,.28,1);
+  }
+  .route-exit {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+  .route-exit.route-exit-active {
+    opacity: 0;
+    transform: translate3d(0, 10px, 0);
+    transition: transform 200ms cubic-bezier(.77,0,.28,1), opacity 200ms cubic-bezier(.77,0,.28,1);
+  }
+}
+

@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import { renderRoutes } from 'react-router-config';
 import { ConnectedRouter } from 'react-router-redux';
+import {} from './root.scss';
 
 const Root = ({
   history,
@@ -13,7 +14,7 @@ const Root = ({
   <Provider store={store}>
     <ConnectedRouter history={history}>
       <BrowserRouter>
-        {renderRoutes(routes)}
+        {renderRoutes(routes, { key: history.location.pathname })}
       </BrowserRouter>
     </ConnectedRouter>
   </Provider>
