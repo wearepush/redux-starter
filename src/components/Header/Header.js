@@ -1,16 +1,15 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Button } from '../../elements';
 import styles from './Header.scss';
 
 const Header = () => (
   <div className={styles.Header}>
     <div className={styles.Header__container}>
-      <Link className={styles.Header__link} to="/">
-        Home
-      </Link>
-      <Link className={styles.Header__link} to="/users">
-        Users
-      </Link>
+      <Button variant="info" label="Info" id="button-open" />
+      <Button variant="outlined-primary" label="Primary" />
+      <Button label="Danger" variant="danger" size="large" />
+      <Button variant="outlined-danger" label="Danger" size="small" />
+      <Button variant="warning" label="warning" />
     </div>
   </div>
 );

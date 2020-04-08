@@ -1,0 +1,98 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+$Button: 'button';
+
+.#{$Button} {
+  border-width: 1px;
+  border-radius: 6px;
+  color: $white-color;
+  background-color: $primary-color;
+  border-color: $primary-color;
+
+  &--primary {
+    background-color: $primary-color;
+    border-color: $primary-color;
+  }
+
+  &--secondary {
+    background-color: $secondary-color;
+    border-color: $secondary-color;
+  }
+
+  &--success {
+    background-color: $success-color;
+    border-color: $success-color;
+  }
+
+  &--light {
+    background-color: $light-color;
+    border-color: $light-color;
+    color: $grey-color;
+  }
+
+  &--info {
+    background-color: $info-color;
+    border-color: $info-color;
+  }
+
+  &--warning {
+    background-color: $warning-color;
+    border-color: $warning-color;
+    color: $grey-color;
+  }
+
+  &--danger {
+    background-color: $danger-color;
+    border-color: $danger-color;
+  }
+
+  &--outlined-primary {
+    background-color: $white-color;
+    border-color: $primary-color;
+    color: $primary-color;
+  }
+  &--outlined-danger {
+    background-color: $white-color;
+    border-color: $danger-color;
+    color: $danger-color;
+  }
+  &--outlined-secondary {
+    background-color: $white-color;
+    border-color: $secondary-color;
+    color: $secondary-color;
+  }
+
+  &--outlined-success {
+    background-color: $white-color;
+    border-color: $success-color;
+    color: $success-color;
+  }
+  &--outlined-info {
+    background-color: $white-color;
+    border-color: $info-color;
+    color: $info-color;
+  }
+
+  &--outlined-warning {
+    background-color: $warning-color;
+    border-color: $warning-color;
+    color: $warning-color;
+  }
+
+  //size
+  &--small {
+    padding: 4px 8px;
+    font-size: 14px;
+  }
+
+  &--medium {
+    padding: 6px 12px;
+    font-size: 16px;
+  }
+
+  &--large {
+    padding: 8px 16px;
+    font-size: 20px;
+  }
+}
